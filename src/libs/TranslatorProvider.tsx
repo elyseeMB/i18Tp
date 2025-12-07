@@ -69,6 +69,9 @@ type Options = Omit<Intl.NumberFormatOptions, "style" | "unit"> & {
 export function useTranslator() {
   const { translate, langV, setLangV } = useContext(TranslateContext);
 
+  const isRLT = ["ar"].includes(langV);
+  const direction = isRLT ? "rtl" : "ltr";
+
   const dateFormat = (
     date: Date | string | number | null,
     options: Intl.DateTimeFormatOptions = {
@@ -87,11 +90,7 @@ export function useTranslator() {
     return new Intl.DateTimeFormat(langV, options).format(date);
   };
 
-  const styleForNumber = (
-    options: Options = {
-      style: "decimal",
-    }
-  ): Intl.NumberFormatOptions => {
+  const styleForNumber = (options: Options): Intl.NumberFormatOptions => {
     switch (options.style) {
       case "currency":
         return {
@@ -140,6 +139,7 @@ export function useTranslator() {
     setLangV,
     dateFormat: dateFormat,
     numberFormat,
+    direction,
     __: translate,
   };
 }
