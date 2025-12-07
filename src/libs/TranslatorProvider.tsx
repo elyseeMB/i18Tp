@@ -94,17 +94,21 @@ export function useTranslator() {
     options: Options = {
       style: "decimal",
     }
-  ) => {
+  ): Intl.NumberFormatOptions => {
     switch (options.style) {
       case "currency":
         return {
-          currency: CurrencyCode[langV.toUpperCase() as CurrencyKey],
           style: "currency",
+          currency: CurrencyCode[langV.toUpperCase() as CurrencyKey],
         };
       case "unit":
         return {
           style: "unit",
           unit: options.unit,
+        };
+      case "percent":
+        return {
+          style: "percent",
         };
       case "decimal":
       default:

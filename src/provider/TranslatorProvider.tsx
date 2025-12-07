@@ -11,6 +11,7 @@ const loader = async (lang: string) => {
     return;
   }
   const module = locales[path];
+  //@ts-ignore
   return module.default;
 };
 

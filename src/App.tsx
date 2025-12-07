@@ -1,4 +1,4 @@
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, type Transition } from "framer-motion";
 import {
   Select,
   SelectContent,
@@ -16,7 +16,7 @@ function App() {
   };
 
   // Configuration Spring
-  const springTransition = {
+  const springTransition: Transition = {
     type: "spring",
     stiffness: 300,
     damping: 30,

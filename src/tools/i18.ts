@@ -34,6 +34,7 @@ function readJson(file: string): Dict {
 }
 
 function writeJson(file: string, dict: Dict) {
+  //@ts-ignore
   const entries = Array.from(dict.entries()).toSorted((a, b) =>
     a[0].localeCompare(b[0])
   );
@@ -77,10 +78,12 @@ for (const lang of langs) {
   const existingKeys = new Set(dict.keys());
 
   console.log(`# Creating ${lang} translations`);
+  //@ts-ignore
   for (const newKey of keys.difference(existingKeys)) {
     dict.set(newKey, "");
     console.log("+ " + newKey);
   }
+  //@ts-ignore
   for (const removedKey of existingKeys.difference(keys)) {
     dict.delete(removedKey);
     console.log("- " + removedKey);
