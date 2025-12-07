@@ -6,7 +6,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from "./components/ui/select.tsx";
-import { useTranslator, type Langs } from "./libs/TranslatorProvider.tsx";
+import { useTranslator } from "./libs/TranslatorProvider.tsx";
+import type { Langs } from "./config.ts";
 
 function App() {
   const { __, langV, setLangV, dateFormat, numberFormat } = useTranslator();

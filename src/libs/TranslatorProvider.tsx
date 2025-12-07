@@ -1,3 +1,4 @@
+import type { Langs } from "@/config.ts";
 import { CurrencyCode, type CurrencyKey } from "@/enum/CurrencyCode.ts";
 import { units } from "@/enum/Unit.ts";
 import {
@@ -10,10 +11,6 @@ import {
   type Dispatch,
   type SetStateAction,
 } from "react";
-
-const langs = ["fr", "en", "zh"] as const;
-
-export type Langs = (typeof langs)[number];
 
 const defaultValue = {
   langV: "fr" as Langs,

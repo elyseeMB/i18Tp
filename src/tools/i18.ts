@@ -1,9 +1,8 @@
+import { langs } from "@/config.ts";
 import { writeFileSync, readFileSync, globSync, existsSync } from "node:fs";
 
 const sourcePath = "./src/**/*.{ts,tsx}";
 const outputPath = "./src/locales/{lang}.json";
-
-const langs = ["en", "zh", "fr", "es", "ja", "ar"];
 
 type Dict = Map<string, string>;
 

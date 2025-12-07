@@ -1,5 +1,6 @@
 import { useState, type PropsWithChildren } from "react";
 import { TranslatorProvider as AppTranslatorProvider } from "../libs/TranslatorProvider.tsx";
+import type { Langs } from "@/config.ts";
 const locales = import.meta.glob("../locales/*.json", { eager: true });
 
 /**
@@ -16,7 +17,8 @@ const loader = async (lang: string) => {
 };
 
 export function TranslatorProvider({ children }: PropsWithChildren<{}>) {
-  const [lang, setLang] = useState<"fr" | "en" | "zh">("fr");
+  const locale = navigator.language.split("-")[0] as Langs;
+  const [lang, setLang] = useState<Langs>(locale);
   return (
     <AppTranslatorProvider loader={loader} lang={lang} setLangV={setLang}>
       {children}
