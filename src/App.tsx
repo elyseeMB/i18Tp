@@ -15,7 +15,6 @@ function App() {
     setLangV(value);
   };
 
-  // Configuration Spring
   const springTransition: Transition = {
     type: "spring",
     stiffness: 300,
@@ -25,7 +24,7 @@ function App() {
   return (
     <div className="mx-auto mt-8 mb-16 flex max-w-[652px] flex-col gap-12 px-7 md:mt-16 md:gap-8">
       <Select onValueChange={handleValueChange} defaultValue={langV}>
-        <SelectTrigger className="w-[100px]">
+        <SelectTrigger className="w-[150px]">
           <SelectValue placeholder={__("Langues")} />
         </SelectTrigger>
         <SelectContent>
