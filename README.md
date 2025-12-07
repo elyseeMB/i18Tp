@@ -2,16 +2,16 @@
 
 Implémentation from scratch d'un système d'internationalisation (i18n) en React et TypeScript.
 
-## 🌍 Langues supportées
+## Langues supportées
 
-- 🇫🇷 Français
-- 🇬🇧 Anglais
-- 🇨🇳 Chinois
-- 🇪🇸 Espagnol
-- 🇯🇵 Japonais
-- 🇸🇦 Arabe
+- Français
+- Anglais
+- Chinois
+- Espagnol
+- Japonais
+- Arabe
 
-## ✨ Fonctionnalités
+## Fonctionnalités
 
 - **Traduction dynamique** : Changement de langue en temps réel
 - **Formats de dates** : Adaptation selon la locale
@@ -21,7 +21,7 @@ Implémentation from scratch d'un système d'internationalisation (i18n) en Reac
 - **Pourcentages** : Formatage des pourcentages
 - **Animations fluides** : Transitions élégantes lors du changement de langue
 
-## 🚀 Technologies utilisées
+## Technologies utilisées
 
 - **React** : Interface utilisateur
 - **TypeScript** : Typage statique
