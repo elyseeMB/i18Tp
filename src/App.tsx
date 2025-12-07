@@ -24,7 +24,7 @@ function App() {
   };
 
   return (
-    <div className="mx-auto mt-8 mb-16 flex max-w-[700px] gap-5 px-7 md:mt-16 md:gap-8">
+    <div className="mx-auto mt-8 mb-16 flex flex-col max-w-[652px] gap-5 px-7 md:mt-16 md:gap-8">
       <Select onValueChange={handleValueChange} defaultValue={langV}>
         <SelectTrigger className="w-[150px]">
           <SelectValue placeholder={__("Langues")} />
@@ -38,7 +38,7 @@ function App() {
           <SelectItem value="ar">{__("Arabe")}</SelectItem>
         </SelectContent>
       </Select>
-      <div className="mx-auto flex max-w-[652px] flex-col gap-12 md:gap-8">
+      <div className="mx-auto flex flex-col gap-12 md:gap-8">
         <AnimatePresence mode="wait">
           <motion.h1
             dir={direction}
