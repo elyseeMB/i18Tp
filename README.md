@@ -1,12 +1,14 @@
-# Internationalisation avec React et TypeScript
+# Internationalization with React and TypeScript
 
-Implémentation from scratch d'un système d'internationalisation (i18n) en React et TypeScript.
+From-scratch implementation of an internationalization (i18n) system in React and TypeScript, built on the browser's native `Intl` API.
 
-## Langues supportées
+Full article: https://elyseemb.github.io/i18Tp/
 
-- Français
-- Anglais
-- Chinois
-- Espagnol
-- Japonais
-- Arabe
+## Supported languages
+
+- French
+- English
+- Chinese
+- Spanish
+- Japanese
+- Arabic
